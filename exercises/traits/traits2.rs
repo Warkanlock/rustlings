@@ -10,10 +10,18 @@
 // No boiler plate code this time,
 // you can do this!
 
-// I AM NOT DONE
-
 trait AppendBar {
     fn append_bar(self) -> Self;
+}
+
+impl AppendBar for Vec<String> {
+    fn append_bar(mut self) -> Self {
+        // let mut new_array: Vec<String> = self.clone();
+        // new_array.push(String::from("Bar"));
+        // new_array
+        self.push(String::from("Bar"));
+        self
+    }
 }
 
 //TODO: Add your code here
